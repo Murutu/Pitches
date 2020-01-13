@@ -8,8 +8,11 @@ from flask_login import LoginManager
 #Instances of flask extensions
 #Instance of loginManager and using its methods
 login_manager = LoginManager()
-db = SQLAlchemy()
+login_manager.login_view = 'auth.login'
 login_manager.session_protection = 'strong'
+db = SQLAlchemy()
+
+
 
 
 
@@ -25,7 +28,7 @@ def create_app(config_name):
     #Initialisation application
     app = Flask(__name__)
     
-    # simple.init_app(app)
+    simple.init_app(app)
     
     # #Creating the app configurations
     app.config.from_object(config_options[config_name])
@@ -34,3 +37,4 @@ def create_app(config_name):
     
     db.init_app(app)
     login_manager.init_app
+    
