@@ -28,7 +28,6 @@ def create_app(config_name):
     #Initialisation application
     app = Flask(__name__)
     
-    simple.init_app(app)
     
     # #Creating the app configurations
     app.config.from_object(config_options[config_name])

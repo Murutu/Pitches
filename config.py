@@ -30,6 +30,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
         '''
+    
         
 config_options = {
     'development': DevConfig,
