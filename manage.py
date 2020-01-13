@@ -13,6 +13,9 @@ app = create_app('production')
 # Create manager instance
 manager = Manager(app)
 
+#Create migrate instance
+migrate = Migrate(app,db)
+
 manager.add_command('server',Server)
 manager.add_command('db',MigrateCommand)
 
