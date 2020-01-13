@@ -13,4 +13,27 @@ class ProdConfig(Config):
     Args:
          Config: The parent configuration class with General configuration settings
     '''
-             
+
+
+class TestConfig(Config):
+    '''
+     Testing configuration child class
+     
+     Args:
+         Config: The parent configuration class with general configuration settings
+         ''' 
+         
+class DevConfig(Config):
+    '''
+    Development configuration child class
+    
+    Args:
+        Config: The parent configuration class with General configuration settings
+        '''
+        
+config_options = {
+    'development': DevConfig,
+    'production': ProdConfig,
+    'test': TestConfig
+}        
+                            
