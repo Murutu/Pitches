@@ -1,0 +1,7 @@
+{% macro display(category_list) %}
+<div class="row">
+    {% if category_list %}
+    {% for category in category_list %}
+    <div class="col-md-6">
+        <div class="thumbnail text-center">
+            <h5 class="card-header">{{category.title}}</h5>
