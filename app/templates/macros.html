@@ -12,4 +12,4 @@
                     <footer class="blockquote-footer"> Posted by {{category.user.username}}</footer>
                 </blockquote>
 
-                <a href=""
+                <a href="{{url_for('main.new_comment',pitch_id = category.id)}}" class="btn btn-info"> Add a comment</a>
